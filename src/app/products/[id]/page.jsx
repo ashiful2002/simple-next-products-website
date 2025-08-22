@@ -9,7 +9,7 @@ export default async function ProductPage({ params }) {
   const { id } = await params;
   console.log(id);
 
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+  const res = await fetch(`https://simple-next-products-website.vercel.app/api/products/${id}`, {
     cache: "no-store",
   });
   if (!res.ok) {
