@@ -1,14 +1,12 @@
 import dbConnect from "@/lib/dbConnect";
 import Link from "next/link";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { ReactJsxRuntime } from "next/dist/server/route-modules/app-page/vendored/rsc/entrypoints";
 export const dynamic = 'force-dynamic';
 
 export default async function Products() {
 
 
-  const res = await fetch("https://simple-next-products-website.vercel.app/api/products" );
+  const res = await fetch("http://localhost:3000/api/products" );
   const products = await res.json();
   if (!products) {
     return (

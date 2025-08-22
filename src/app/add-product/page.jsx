@@ -34,7 +34,7 @@ export default function AddProduct() {
       colors: form.colors.split(",").map((c) => c.trim()),
     };
 
-    const res = await fetch("https://simple-next-products-website.vercel.app/api/products", {
+    const res = await fetch("http://localhost:3000/api/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(productData),
