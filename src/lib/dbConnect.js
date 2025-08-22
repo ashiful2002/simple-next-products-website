@@ -6,7 +6,7 @@ export const collectionNames = {
 };
 
 const dbConnect = (collectionName) => {
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.NEXT_PUBLIC_MONGODB_URI;
 
   const client = new MongoClient(uri, {
     serverApi: {
@@ -15,7 +15,7 @@ const dbConnect = (collectionName) => {
       deprecationErrors: true,
     },
   });
-  return client.db(process.env.DB_NAME).collection(collectionName);
+  return client.db(process.env.NEXT_PUBLIC_DB_NAME).collection(collectionName);
 };
 
 export default dbConnect;

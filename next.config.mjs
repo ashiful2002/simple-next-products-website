@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.mobiledokan.com",
       },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co.com",
+      },
     ],
   },
 };
