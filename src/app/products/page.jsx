@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 export default async function Products() {
 
 
-  const res = await fetch("http://localhost:3000/api/products" );
+  const res = await fetch("https://simple-next-products-website.vercel.app/api/products" );
   const products = await res.json();
   if (!products) {
     return (
