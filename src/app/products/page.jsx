@@ -9,7 +9,7 @@ export default async function Products() {
   // const serviceCollection = dbConnect("productsCollection");
   // const products = await serviceCollection.find({}).toArray();
 
-  const res = await fetch("https://simple-next-products-website.vercel.app/api/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const products = await res.json();
   if (!products) {
     return (
