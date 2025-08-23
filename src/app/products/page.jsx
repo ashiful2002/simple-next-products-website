@@ -2,7 +2,10 @@ import dbConnect from "@/lib/dbConnect";
 import Link from "next/link";
 import Image from "next/image";
 export const dynamic = 'force-dynamic';
-
+export const metadata = {
+  title: "All products",
+  description: "faraz all products ",
+};
 export default async function Products() {
 
 

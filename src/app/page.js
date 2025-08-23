@@ -6,6 +6,10 @@ import Products from "./products/page";
 import Hero from "./Section/Hero";
 import CarouselHome from "./Section/CarouselHome";
 
+export const metadata = {
+  title: "Hone",
+  description: "faraz numbr 1 e commerz ",
+};
 export default function Home() {
   return (
     <main>

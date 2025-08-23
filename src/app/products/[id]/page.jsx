@@ -3,15 +3,21 @@ import { ObjectId } from "mongodb";
 import dbConnect from "@/lib/dbConnect";
 import Image from "next/image";
 import toast from "react-hot-toast";
-
+export const metadata = {
+  title: "single product",
+  description: "faraz phone ",
+};
 // Dynamic page receives params from the route
 export default async function ProductPage({ params }) {
   const { id } = await params;
   console.log(id);
 
-  const res = await fetch(`https://simple-next-products-website.vercel.app/api/products/${id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://simple-next-products-website.vercel.app/api/products/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
   if (!res.ok) {
     console.log("error fetch data");
   }
